@@ -43,6 +43,92 @@
         margin-bottom: 1rem;
       }
     </style>
+    <!-- Add this to your <head> section -->
+<style>
+    /* Smooth animations for FAQ items */
+    details .pl-2 {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    
+    details[open] .pl-2 {
+      max-height: 1000px; /* Arbitrary large value */
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Animated section entrance */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Category buttons hover effect */
+    .category-btn {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .category-btn:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #d53369;
+      transition: width 0.4s ease;
+    }
+    
+    .category-btn:hover:after {
+      width: 100%;
+    }
+    
+    /* Plus/Minus animation */
+    details summary::after {
+      transition: transform 0.3s ease, content 0.1s;
+    }
+    
+    details[open] summary::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    
+    /* Section title animation */
+    .animated-border {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .animated-border:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: -5px;
+      left: 0;
+      background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+      transition: width 0.6s ease;
+    }
+    
+    .animated-border.is-visible:after {
+      width: 100%;
+    }
+  </style>
   </head>
   <body class="leading-normal tracking-normal text-gray-800" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
@@ -432,5 +518,72 @@
         return false;
       }
     </script>
+    <!-- New animation script -->
+<script>
+    // Intersection Observer for scroll animations
+    document.addEventListener('DOMContentLoaded', function() {
+      // Apply category button animations
+      const categoryButtons = document.querySelectorAll('[href^="#"]');
+      categoryButtons.forEach(btn => {
+        btn.classList.add('category-btn');
+      });
+      
+      // Apply animations to section titles
+      const sectionTitles = document.querySelectorAll('h2');
+      sectionTitles.forEach(title => {
+        title.classList.add('animated-border');
+      });
+      
+      // Fade in sections when scrolled into view
+      const sections = document.querySelectorAll('#application, #work, #earnings, #privacy, .bg-gray-100');
+      sections.forEach(section => {
+        section.classList.add('fade-in-section');
+      });
+      
+      // Create IntersectionObserver
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      // Observe all sections with animations
+      document.querySelectorAll('.fade-in-section, .animated-border').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // Add staggered animation to FAQ items
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.1}s`;
+        item.classList.add('fade-in-section');
+        observer.observe(item);
+      });
+      
+      // Smooth reveal for FAQ details when clicked
+      document.querySelectorAll('details').forEach(detail => {
+        detail.addEventListener('toggle', function() {
+          if (this.open) {
+            const summaryRect = this.querySelector('summary').getBoundingClientRect();
+            const isOutOfViewport = summaryRect.bottom > window.innerHeight;
+            
+            if (isOutOfViewport) {
+              // Scroll to show the content if it would be out of viewport
+              setTimeout(() => {
+                window.scrollBy({
+                  top: summaryRect.height,
+                  behavior: 'smooth'
+                });
+              }, 100);
+            }
+          }
+        });
+      });
+    });
+    </script>    
   </body>
 </html>
