@@ -1,4 +1,3 @@
-// Animation JavaScript for Persica Studio website
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
