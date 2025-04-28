@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Blog - Professional webcam studio insights and news" />
+    <meta name="keywords" content="webcam studio, blog, industry insights, tips, news" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="animations.css"/>
+    <link rel="icon" href="/assets/favi.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+            });
+        });
+    </script>
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+      }
+      .content-gradient {
+        background: linear-gradient(135deg, rgba(213, 51, 105, 0.1) 0%, rgba(218, 174, 81, 0.1) 100%);
+      }
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .category-badge {
+        background: linear-gradient(120deg, #d53369 0%, #daae51 100%);
+      }
+      .search-input:focus {
+        box-shadow: 0 0 0 3px rgba(213, 51, 105, 0.3);
+      }
+    </style>
+  </head>
+  <body class="leading-normal tracking-normal text-gray-800" style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+          <div class="pl-4 flex items-center">
+            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="https://persicastudio.com">
+              <!-- Logo Header -->
+              <img src="./assets/headerlogot.png" alt="Persica Studio" class="h-20 inline" />
+            </a>
+          </div>
+          <div class="block lg:hidden pr-4">
+            <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </button>
+          </div>
+          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+              <li class="mr-3">
+                <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="https://persicastudio.com">Home</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="https://persicastudio.com/about">About Us</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="https://persicastudio.com/blog">Blog</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="https://persicastudio.com/contact">Contact</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="https://persicastudio.com/faq">FAQ</a>
+              </li>
+            </ul>
+            <a href="https://persicastudio.com/modelregistration">
+              <button
+                id="navAction"
+                class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              >
+                Join the Team
+              </button>
+            </a>
+          </div>
+        </div>
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+  
+    <!-- Hero Section -->
+    <div class="pt-24 gradient">
+      <div class="container px-3 mx-auto">
+        <div class="w-full text-center">
+          <h1 class="text-5xl font-bold leading-tight text-white mb-6">Persica Studio Blog</h1>
+          <p class="text-xl text-white mb-8">
+            Industry insights, success stories, and professional tips
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="relative -mt-12">
+      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"
+            ></path>
+            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+          </g>
+          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Blog Search and Categories -->
+    <section class="py-8 bg-white">
+      <div class="container max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap">
+          <!-- Search -->
+          <div class="w-full md:w-1/3 px-4 mb-6">
+            <div class="relative">
+              <input type="text" placeholder="Search articles..." class="search-input w-full py-3 px-4 bg-gray-100 rounded-full border-2 border-gray-200 focus:outline-none transition duration-300">
+              <button class="absolute right-0 top-0 mt-3 mr-4">
+                <i class="fas fa-search text-gray-500"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Categories -->
+          <div class="w-full md:w-2/3 px-4 mb-6">
+            <div class="flex flex-wrap justify-center md:justify-end">
+              <a href="#" class="category-badge text-white text-sm font-bold py-2 px-4 rounded-full m-1 transition duration-300 hover:opacity-90">All Topics</a>
+              <a href="#" class="category-badge text-white text-sm font-bold py-2 px-4 rounded-full m-1 transition duration-300 hover:opacity-90">Industry News</a>
+              <a href="#" class="category-badge text-white text-sm font-bold py-2 px-4 rounded-full m-1 transition duration-300 hover:opacity-90">Success Stories</a>
+              <a href="#" class="category-badge text-white text-sm font-bold py-2 px-4 rounded-full m-1 transition duration-300 hover:opacity-90">Tips & Advice</a>
+              <a href="#" class="category-badge text-white text-sm font-bold py-2 px-4 rounded-full m-1 transition duration-300 hover:opacity-90">Technology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-8 bg-gray-50">
+      <div class="container max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8">Featured Article</h2>
+        
+        <div class="flex flex-wrap" data-aos="fade-up">
+          <div class="w-full lg:w-2/3 mb-8 lg:mb-0 pr-0 lg:pr-8">
+            <a href="blog-post.html">
+              <div class="blog-card h-full bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                <img src="./assets/exteriorpool.jpg" alt="Featured Post" class="w-full h-64 object-cover">
+                <div class="p-6">
+                  <span class="inline-block category-badge text-white text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">Success Stories</span>
+                  <h3 class="text-2xl font-bold mb-3">How Our Professional Environment Helps Models Thrive</h3>
+                  <p class="text-gray-600 mb-4">Discover how our state-of-the-art facilities and supportive team have helped models increase their earnings by over 30% in their first three months.</p>
+                  <div class="flex items-center">
+                    <img src="./assets/vikak5.jpg" alt="Author" class="w-10 h-10 rounded-full mr-4">
+                    <div>
+                      <p class="font-bold">Vika K.</p>
+                      <p class="text-sm text-gray-500">April 22, 2025 • 5 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <div class="w-full lg:w-1/3">
+            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+              <h3 class="text-xl font-bold mb-4">Popular Posts</h3>
+              
+              <ul>
+                <li class="mb-4 pb-4 border-b border-gray-100">
+                  <a href="#" class="flex items-center hover:opacity-80 transition duration-300">
+                    <span class="bg-gray-200 text-gray-800 font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">1</span>
+                    <span>5 Tips for New Webcam Models to Build Confidence</span>
+                  </a>
+                </li>
+                <li class="mb-4 pb-4 border-b border-gray-100">
+                  <a href="#" class="flex items-center hover:opacity-80 transition duration-300">
+                    <span class="bg-gray-200 text-gray-800 font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
+                    <span>How to Create a Professional Studio Space at Home</span>
+                  </a>
+                </li>
+                <li class="mb-4 pb-4 border-b border-gray-100">
+                  <a href="#" class="flex items-center hover:opacity-80 transition duration-300">
+                    <span class="bg-gray-200 text-gray-800 font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                    <span>Understanding Income Potential in the Webcam Industry</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center hover:opacity-80 transition duration-300">
+                    <span class="bg-gray-200 text-gray-800 font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
+                    <span>Industry Trends to Watch in 2025</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Blog Posts -->
+    <section class="py-16 bg-white">
+      <div class="container max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8">Latest Articles</h2>
+        
+        <div class="flex flex-wrap -mx-4">
+          <!-- Blog Post 1 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
+            <a href="blog-post.html">
+              <div class="blog-card h-full bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                <img src="./assets/K_PersicaStudio_HQ-03.png" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <span class="inline-block category-badge text-white text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">Tips & Advice</span>
+                  <h3 class="text-xl font-bold mb-3">Creating Your Personal Brand as a Webcam Model</h3>
+                  <p class="text-gray-600 mb-4">Learn how to differentiate yourself in a competitive market and build a loyal following.</p>
+                  <div class="flex items-center">
+                    <img src="./assets/maria.jpg" alt="Author" class="w-8 h-8 rounded-full mr-3">
+                    <div>
+                      <p class="text-sm text-gray-500">April 18, 2025 • 4 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Blog Post 2 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="200">
+            <a href="blog-post.html">
+              <div class="blog-card h-full bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                <img src="./assets/sofiat.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <span class="inline-block category-badge text-white text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">Technology</span>
+                  <h3 class="text-xl font-bold mb-3">Tech Upgrades That Can Boost Your Stream Quality</h3>
+                  <p class="text-gray-600 mb-4">Discover the latest equipment and software that can take your streams to the next level.</p>
+                  <div class="flex items-center">
+                    <img src="./assets/sofiat.jpg" alt="Author" class="w-8 h-8 rounded-full mr-3">
+                    <div>
+                      <p class="text-sm text-gray-500">April 15, 2025 • 6 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Blog Post 3 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="300">
+            <a href="blog-post.html">
+              <div class="blog-card h-full bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                <img src="./assets/vikak5.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <span class="inline-block category-badge text-white text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">Industry News</span>
+                  <h3 class="text-xl font-bold mb-3">2025 Trends in the Webcam Industry</h3>
+                  <p class="text-gray-600 mb-4">Stay ahead of the curve with our analysis of emerging trends and opportunities in the industry.</p>
+                  <div class="flex items-center">
+                    <img src="./assets/vikak5.jpg" alt="Author" class="w-8 h-8 rounded-full mr-3">
+                    <div>
+                      <p class="text-sm text-gray-500">April 10, 2025 • 7 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Blog Post 4 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="100">
+            <a href="blog-post.html">
+              <div class="blog-card h-full bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                <img src="./assets/maria.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <span class="inline-block category-badge text-white text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">Success Stories</span>
+                  <h3 class="text-xl font-bold mb-3">From Beginner to Top Earner: Ana's Journey</h3>
+                  <p class="text-gray-600 mb-4">Read about how Ana went from a newcomer to a top performer in just six months.</p>
+                  <div class="flex items-center">
+                    <img src="./assets/maria.jpg" alt="Author" class="w-8 h-8 rounded-full mr-3">
+                    <div>
+                      <p class="text-sm text-gray-500">April 5, 2025 • 8 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Blog Post 5 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="200">
+            <a href="blog-post.html">
+              <div class="blog-card h-full bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                <img src="./assets/exteriorpool.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <span class="inline-block category-badge text-white text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">Tips & Advice</span>
+                  <h3 class="text-xl font-bold mb-3">Self-Care Practices for Webcam Professionals</h3>
+                  <p class="text-gray-600 mb-4">Important mental and physical self-care strategies for long-term success in the industry.</p>
+                  <div class="flex items-center">
+                    <img src="./assets/sofiat.jpg" alt="Author" class="w-8 h-8 rounded-full mr-3">
+                    <div>
+                      <p class="text-sm text-gray-500">March 28, 2025 • 5 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Blog Post 6 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8" data-aos="fade-up" data-aos-delay="300">
+            <a href="blog-post.html">
+              <div class="blog-card h-full bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                <img src="./assets/K_PersicaStudio_HQ-03.png" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <span class="inline-block category-badge text-white text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">Industry News</span>
+                  <h3 class="text-xl font-bold mb-3">New Studio Expansion Announcement</h3>
+                  <p class="text-gray-600 mb-4">Exciting news about our upcoming studio expansion and what it means for our models.</p>
+                  <div class="flex items-center">
+                    <img src="./assets/vikak5.jpg" alt="Author" class="w-8 h-8 rounded-full mr-3">
+                    <div>
+                      <p class="text-sm text-gray-500">March 20, 2025 • 3 min read</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="flex justify-center mt-8" data-aos="fade-up">
+          <nav class="inline-flex rounded-md shadow">
+            <a href="#" class="py-2 px-4 bg-gray-200 text-gray-600 rounded-l-md hover:bg-gray-300 transition duration-300">Previous</a>
+            <a href="#" class="py-2 px-4 bg-pink-500 text-white hover:bg-pink-600 transition duration-300">1</a>
+            <a href="#" class="py-2 px-4 bg-gray-200 text-gray-600 hover:bg-gray-300 transition duration-300">2</a>
+            <a href="#" class="py-2 px-4 bg-gray-200 text-gray-600 hover:bg-gray-300 transition duration-300">3</a>
+            <a href="#" class="py-2 px-4 bg-gray-200 text-gray-600 rounded-r-md hover:bg-gray-300 transition duration-300">Next</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="content-gradient py-12">
+      <div class="container max-w-5xl mx-auto px-4 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6">Subscribe to Our Newsletter</h2>
+        <p class="text-xl mb-8">Stay updated with industry trends, tips, and exclusive content.</p>
+        
+        <div class="max-w-md mx-auto">
+          <form class="flex flex-wrap">
+            <input type="email" placeholder="Your email address" class="flex-1 py-3 px-4 rounded-l-lg focus:outline-none border-2 border-white">
+            <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-r-lg transition duration-300">Subscribe</button>
+          </form>
+          <p class="text-sm text-gray-600 mt-3">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="gradient py-8" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Your New Career?</h2>
+        <p class="text-xl text-white mb-8">Join our professional and supportive environment today.</p>
+        <a href="https://persicastudio.com/modelregistration" class="pulse-button bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg hover:shadow-xl transition duration-300">
+          Apply Now
+        </a>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-white">
+        <div class="container mx-auto px-8">
+          <div class="w-full flex flex-col md:flex-row py-6">
+            <div class="flex-1 mb-6 text-black">
+              <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="https://persicastudio.com">
+                <img src="./assets/K_PersicaStudio_HQ-03.png" alt="Persica Studio" class="h-40 inline" />
+              </a>
+            </div>
+            <div class="flex-1">
+              <p class="uppercase text-gray-500 md:mb-6">Links</p>
+              <ul class="list-reset mb-6">
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://persicastudio.com/faq" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1">
+              <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+              <ul class="list-reset mb-6">
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://persicastudio.com/terms" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+                </li>
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://persicastudio.com/privacy" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1">
+              <p class="uppercase text-gray-500 md:mb-6">Social</p>
+              <ul class="list-reset mb-6">
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://www.facebook.com/people/Persica-Studio/61575403124610" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+                </li>
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://www.tiktok.com/@persica_studio" class="no-underline hover:underline text-gray-800 hover:text-pink-500">TikTok</a>
+                </li>
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://x.com/Persica_Studio" class="no-underline hover:underline text-gray-800 hover:text-pink-500">X</a>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1">
+              <p class="uppercase text-gray-500 md:mb-6">Company</p>
+              <ul class="list-reset mb-6">
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://persicastudio.com/blog" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Blog</a>
+                </li>
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://persicastudio.com/about" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+                </li>
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                  <a href="https://persicastudio.com/contact" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+  <script>
+    var scrollpos = window.scrollY;
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var navaction = document.getElementById("navAction");
+    var brandname = document.getElementById("brandname");
+    var toToggle = document.querySelectorAll(".toggleColour");
+
+    document.addEventListener("scroll", function () {
+      scrollpos = window.scrollY;
+
+      if (scrollpos > 10) {
+        header.classList.add("bg-white");
+        navaction.classList.remove("bg-white");
+        navaction.classList.add("gradient");
+        navaction.classList.remove("text-gray-800");
+        navaction.classList.add("text-white");
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-gray-800");
+          toToggle[i].classList.remove("text-white");
+        }
+      } else {
+        header.classList.remove("bg-white");
+        navaction.classList.remove("gradient");
+        navaction.classList.add("bg-white");
+        navaction.classList.remove("text-white");
+        navaction.classList.add("text-gray-800");
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-white");
+          toToggle[i].classList.remove("text-gray-800");
+        }
+      }
+    });
+
+    var navToggle = document.getElementById('nav-toggle');
+    var navContent = document.getElementById('nav-content');
+
+    navToggle.addEventListener('click', function() {
+      navContent.classList.toggle('hidden');
+    });
+  </script>
+  <script src="animations.js"></script>
+</body>
+</html>
