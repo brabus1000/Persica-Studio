@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /temp/
+
+# Allow important directories explicitly
+Allow: /blog/
+Allow: /about/
+Allow: /contact/
+Allow: /faq/
+Allow: /modelregistration/
+Allow: /adminregistration/
+Allow: /monitorregistration/
+
+# Crawl delay for heavy bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Point to XML sitemap
+Sitemap: https://persicastudio.com/sitemap.xml
